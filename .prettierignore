@@ -1,0 +1,14 @@
+.gitignore
+.prettierrc
+.eslintrc
+.github
+.vscode
+package.json
+yarn.lock
+package-lock.json
+node_modules
+README.md
+.next
+dist
+.git
+.prettierignore
