@@ -1,5 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
-  }
+    "baseUrl": "./src"
+  },
+  "include": [
+    "pages/**/*",
+    "src/**/*",
+  ],
+  "jsx": "preserve",
+  "exclude": [
+    "node_modules",
+    "**/*.spec.js",
+    "**/*.d.ts",
+    ".next",
+    ".vscode",
+    ".github"
+  ]
 }
