@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.shape(PropTypes.any).isRequired,
 };
 
 export default Layout;

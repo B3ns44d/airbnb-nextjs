@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 import PropTypes from 'prop-types';
 
 function MyApp({ Component, pageProps }) {
