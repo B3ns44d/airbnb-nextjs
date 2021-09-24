@@ -64,3 +64,21 @@ export const homes = [
     img: 'https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg',
   },
 ];
+
+export const discover = [
+  {
+    name: 'Experiences',
+    description: 'Find unforgettable activities near you.',
+    img: 'https://a0.muscache.com/im/pictures/ad109d56-2421-40cd-98e6-e114160dc85b.jpg',
+  },
+  {
+    name: 'Online Experiences',
+    description: 'Live, interactive activities led by Hosts.',
+    img: 'https://a0.muscache.com/im/pictures/0ce799cb-7553-4369-be9e-d0011e0ef636.jpg',
+  },
+  {
+    name: 'Featured collection: Wanderlust',
+    description: 'Travel from home with Online Experiences.',
+    img: 'https://a0.muscache.com/im/pictures/247a1ea3-946d-4eb8-a6ab-e8b9a66846f4.jpg',
+  },
+];

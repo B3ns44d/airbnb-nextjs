@@ -8,8 +8,9 @@ import { ENDPOINTS } from 'shared/constants';
 import { apiHomePropType } from 'shared/common/propTypes';
 import LiveAnyWhere from 'containers/liveanywhere';
 import SpaceHosting from 'containers/hosting';
+import DiscoverNewThings from 'containers/discover';
 
-const Home = ({ nearbyData, liveAnyWhereData }) => (
+const Home = ({ nearbyData, liveAnyWhereData, discover }) => (
   <>
     <Head>
       <title>Airbnb Clone</title>
@@ -26,6 +27,7 @@ const Home = ({ nearbyData, liveAnyWhereData }) => (
           description="Earn extra income and unlock new opportunities by sharing your space."
           buttonText="Learn more"
         />
+        <DiscoverNewThings data={discover} />
       </ContentWrapper>
     </Layout>
   </>
@@ -39,10 +41,14 @@ export const getStaticProps = async () => {
     const { data: liveAnyWhereData } = await api.get(
       `${ENDPOINTS.BASE_URL}/${ENDPOINTS.LIVEANYWHERE}`
     );
+    const { data: discover } = await api.get(
+      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.DISCOVER}`
+    );
     return {
       props: {
         nearbyData,
         liveAnyWhereData,
+        discover,
       },
     };
   } catch (error) {
@@ -53,9 +59,11 @@ export const getStaticProps = async () => {
 Home.propTypes = {
   nearbyData: apiHomePropType,
   liveAnyWhereData: apiHomePropType,
+  discover: apiHomePropType,
 };
 Home.defaultProps = {
   nearbyData: [],
   liveAnyWhereData: [],
+  discover: [],
 };
 export default Home;

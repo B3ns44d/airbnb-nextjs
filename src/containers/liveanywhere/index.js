@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionTitle from 'shared/components/SectionTitle';
 import { apiHomePropType } from 'shared/common/propTypes';
-import HomesCard from 'shared/components/Card';
+import HomesCard from 'shared/components/HomesCard';
 import { uniqueId } from 'lodash';
 
 const LiveAnyWhere = ({ data }) => (
