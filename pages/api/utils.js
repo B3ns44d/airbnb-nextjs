@@ -40,3 +40,27 @@ export const places = [
     img: 'https://a0.muscache.com/im/pictures/7c309a70-bc93-4603-8d3b-9d4cd9bf75b2.jpg',
   },
 ];
+
+export const homes = [
+  {
+    name: 'Outdoor getaways',
+    img: 'https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg',
+  },
+
+  {
+    name: 'Unique stays',
+    img: 'https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg',
+  },
+  {
+    name: 'Outdoor getaways',
+    img: 'https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg',
+  },
+  {
+    name: 'Entire homes',
+    img: 'https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg',
+  },
+  {
+    name: 'Outdoor getaways',
+    img: 'https://a0.muscache.com/im/pictures/2f13349d-879d-43c6-83e3-8e5679291d53.jpg',
+  },
+];

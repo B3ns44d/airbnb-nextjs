@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import { childrenPropType } from 'shared/common/propTypes';
 
 const CardWrapper = ({ children, ...rest }) => (
   <div
@@ -11,7 +11,7 @@ const CardWrapper = ({ children, ...rest }) => (
 );
 
 CardWrapper.propTypes = {
-  children: PropTypes.element,
+  children: childrenPropType,
 };
 CardWrapper.defaultProps = {
   children: null,

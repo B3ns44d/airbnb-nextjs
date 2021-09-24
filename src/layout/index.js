@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import { childrenPropType } from 'shared/common/propTypes';
 import TopBar from './TopBar';
 
 const Layout = ({ children }) => (
@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.shape(PropTypes.any).isRequired,
+  children: childrenPropType.isRequired,
 };
 
 export default Layout;

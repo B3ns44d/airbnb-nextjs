@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import { childrenPropType } from 'shared/common/propTypes';
 
 const ContentWrapper = ({ children, ...rest }) => (
   <main className="max-w-7xl mx-auto px-8 sm:px-16" {...rest}>
@@ -8,7 +8,7 @@ const ContentWrapper = ({ children, ...rest }) => (
 );
 
 ContentWrapper.propTypes = {
-  children: PropTypes.element,
+  children: childrenPropType,
 };
 ContentWrapper.defaultProps = {
   children: null,

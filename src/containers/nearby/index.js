@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from 'shared/components/SectionTitle';
-import { nearbyData } from 'shared/common/propTypes';
+import { apiHomePropType } from 'shared/common/propTypes';
 import NearbyPlacesCard from 'shared/components/NearbyPlacesCard';
 import { uniqueId } from 'lodash';
 import CardWrapper from './CardWrapper';
@@ -21,6 +21,6 @@ const ExploreNearby = ({ data }) => (
   </section>
 );
 
-ExploreNearby.propTypes = { data: nearbyData };
+ExploreNearby.propTypes = { data: apiHomePropType };
 ExploreNearby.defaultProps = { data: [] };
 export default ExploreNearby;
