@@ -9,8 +9,9 @@ import { apiHomePropType } from 'shared/common/propTypes';
 import LiveAnyWhere from 'containers/liveanywhere';
 import SpaceHosting from 'containers/hosting';
 import DiscoverNewThings from 'containers/discover';
+import FutureGetaways from 'containers/futuregetaways';
 
-const Home = ({ nearbyData, liveAnyWhereData, discover }) => (
+const Home = ({ nearbyData, liveAnyWhereData, discover, futuregetaways }) => (
   <>
     <Head>
       <title>Airbnb Clone</title>
@@ -28,6 +29,7 @@ const Home = ({ nearbyData, liveAnyWhereData, discover }) => (
           buttonText="Learn more"
         />
         <DiscoverNewThings data={discover} />
+        <FutureGetaways data={futuregetaways} />
       </ContentWrapper>
     </Layout>
   </>
@@ -44,11 +46,15 @@ export const getStaticProps = async () => {
     const { data: discover } = await api.get(
       `${ENDPOINTS.BASE_URL}/${ENDPOINTS.DISCOVER}`
     );
+    const { data: futuregetaways } = await api.get(
+      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.FUTUREGETAWAYS}`
+    );
     return {
       props: {
         nearbyData,
         liveAnyWhereData,
         discover,
+        futuregetaways,
       },
     };
   } catch (error) {
@@ -60,10 +66,12 @@ Home.propTypes = {
   nearbyData: apiHomePropType,
   liveAnyWhereData: apiHomePropType,
   discover: apiHomePropType,
+  futuregetaways: apiHomePropType,
 };
 Home.defaultProps = {
   nearbyData: [],
   liveAnyWhereData: [],
   discover: [],
+  futuregetaways: [],
 };
 export default Home;

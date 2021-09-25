@@ -2,7 +2,7 @@ import React from 'react';
 import { childrenPropType } from 'shared/common/propTypes';
 
 const ContentWrapper = ({ children, ...rest }) => (
-  <main className="max-w-7xl mx-auto px-8 sm:px-16" {...rest}>
+  <main className="max-w-[110rem] mx-auto px-8 sm:px-16" {...rest}>
     {children}
   </main>
 );

@@ -5,4 +5,5 @@ export const ENDPOINTS = {
   NEARBYPLACES: 'nearbyplaces',
   LIVEANYWHERE: 'liveanywhere',
   DISCOVER: 'discover',
+  FUTUREGETAWAYS: 'futuregetaways',
 };
