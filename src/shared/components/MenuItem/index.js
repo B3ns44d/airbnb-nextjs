@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Menu } from '@headlessui/react';
 import clsx from 'clsx';
-import React from 'react';
 
 const MenuItem = ({ path, title, ...rest }) => (
   <Menu.Item>

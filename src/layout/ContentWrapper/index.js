@@ -1,4 +1,3 @@
-import React from 'react';
 import { childrenPropType } from 'shared/common/propTypes';
 
 const ContentWrapper = ({ children, ...rest }) => (

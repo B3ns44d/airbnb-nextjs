@@ -1,4 +1,3 @@
-import React from 'react';
 import { childrenPropType } from 'shared/common/propTypes';
 import Footer from './Footer';
 import TopBar from './TopBar';
@@ -12,7 +11,9 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: childrenPropType.isRequired,
+  children: childrenPropType,
 };
-
+Layout.defaultProps = {
+  children: null,
+};
 export default Layout;

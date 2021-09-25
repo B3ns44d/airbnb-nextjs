@@ -1,5 +1,4 @@
 import { SearchIcon } from '@heroicons/react/solid';
-import React from 'react';
 
 const View = () => (
   <div className="py-2 md:shadow-sm flex items-center border-2 rounded-full">

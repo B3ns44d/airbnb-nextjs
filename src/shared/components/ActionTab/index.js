@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
-import React from 'react';
 
 const ActionTab = ({ category, selectedTab, idx }) => (
   <div

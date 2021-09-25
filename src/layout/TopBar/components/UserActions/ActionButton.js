@@ -1,4 +1,3 @@
-import React from 'react';
 import { MenuIcon, UserCircleIcon } from '@heroicons/react/solid';
 import { Menu } from '@headlessui/react';
 

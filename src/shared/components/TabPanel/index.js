@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Tab } from '@headlessui/react';
 import { uniqueId } from 'lodash';
-import React from 'react';
 
 const TabPanel = ({ data }) => (
   <Tab.Panel className="bg-white rounded-xl p-3 outline-none">
@@ -17,7 +16,7 @@ const TabPanel = ({ data }) => (
 );
 
 TabPanel.propTypes = {
-  data: PropTypes.shape(PropTypes.array),
+  data: PropTypes.oneOfType(PropTypes.object, PropTypes.array),
 };
 TabPanel.defaultProps = { data: [] };
 export default TabPanel;

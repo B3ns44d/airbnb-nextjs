@@ -1,4 +1,3 @@
-import React from 'react';
 import SectionTitle from 'shared/components/SectionTitle';
 import { apiHomePropType } from 'shared/common/propTypes';
 import NearbyPlacesCard from 'shared/components/NearbyPlacesCard';

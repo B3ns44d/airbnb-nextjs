@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import { memo } from 'react';
 
 const FooterItem = ({ name, path }) => (
-  <li>
-    <Link href={path} passHref>
-      <span className="cursor-pointer text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400 hover:underline">
+  <li key={name}>
+    <a href={path}>
+      <span
+        type="button"
+        className="cursor-pointer text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400 hover:underline"
+      >
         {name}
       </span>
-    </Link>
+    </a>
   </li>
 );
 
@@ -19,4 +22,4 @@ FooterItem.defaultProps = {
   name: '',
   path: '/',
 };
-export default FooterItem;
+export default memo(FooterItem);

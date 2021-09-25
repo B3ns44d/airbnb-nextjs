@@ -1,4 +1,3 @@
-import React from 'react';
 import { get, uniqueId } from 'lodash';
 import FooterItem from 'shared/components/FooterItem';
 import { items, footerLinks } from './utils';
@@ -27,11 +26,9 @@ const Footer = () => (
         <p className="text-sm text-gray-600">
           © 2021 Airbnb, Inc. ·{' '}
           {footerLinks?.map(({ title, path }) => (
-            <>
-              <span key={uniqueId(title)} className="pl-1 pr-1 hover:underline">
-                <a href={path}>{title}</a>
-              </span>
-            </>
+            <span key={uniqueId(title)} className="pl-1 pr-1 hover:underline">
+              <a href={path}>{title}</a>
+            </span>
           ))}
         </p>
         <SocialLinks />
