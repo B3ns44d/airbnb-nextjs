@@ -1,9 +1,14 @@
 import '../styles/globals.css';
 import PropTypes from 'prop-types';
 import { childrenPropType } from 'shared/common/propTypes';
+import { AppContextWrapper } from 'context/AppContext';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <AppContextWrapper>
+      <Component {...pageProps} />
+    </AppContextWrapper>
+  );
 }
 MyApp.propTypes = {
   Component: childrenPropType,

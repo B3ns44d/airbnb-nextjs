@@ -7,3 +7,11 @@ export const ENDPOINTS = {
   DISCOVER: 'discover',
   FUTUREGETAWAYS: 'futuregetaways',
 };
+
+export const RANGE_SELECTION = {
+  KEY: 'selection',
+};
+
+export const COLORS = {
+  PRIMARY: '#FD5B61',
+};

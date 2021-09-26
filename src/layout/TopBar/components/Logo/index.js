@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import { useSize } from 'ahooks';
 import IMAGES from 'shared/constants/images';
 import { PAGE_MAX_WIDTH } from 'shared/constants';
@@ -27,4 +27,4 @@ Logo.defaultProps = {
   smallLogo: IMAGES.smallLogo,
 };
 
-export default Logo;
+export default memo(Logo);
