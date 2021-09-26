@@ -22,3 +22,7 @@
 .icons-hover {
   @apply hover:scale-105 transition transform duration-100 ease-out cursor-pointer;
 }
+
+.tab-panel-card-effect {
+  @apply hover:bg-gray-100 bg-white rounded-xl p-3 focus:bg-white focus:outline-none focus:ring-2 ring-offset-2 ring-offset-gray-500 ring-white ring-opacity-60;
+}
