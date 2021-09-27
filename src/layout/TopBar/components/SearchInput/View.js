@@ -7,6 +7,7 @@ const View = ({ onUserSearchInputChange, userSearchInput }) => (
       value={userSearchInput}
       onChange={({ target }) => onUserSearchInputChange(target)}
       type="text"
+      // TODO: add dynamic placeholder
       placeholder="Where are you going?"
       className="rounded-l-full w-full flex-grow pl-5 outline-none bg-transparent text-sm text-gray-600 placeholder-gray-400"
     />

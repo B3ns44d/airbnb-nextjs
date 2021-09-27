@@ -15,3 +15,9 @@ export const RANGE_SELECTION = {
 export const COLORS = {
   PRIMARY: '#FD5B61',
 };
+
+export const DATE_FORMAT = {
+  default: 'dd/MM/yyyy',
+  startDate: 'MMM dd',
+  endDate: 'dd',
+};

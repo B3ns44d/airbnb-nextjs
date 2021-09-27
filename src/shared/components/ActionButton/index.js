@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
-const ActionButton = ({
-  textColor,
-  text,
-  onClick,
-  textColorOpacity,
-  ...rest
-}) => (
+const ActionButton = ({ textColor, text, onClick, ...rest }) => (
   <button
     onClick={onClick}
     type="button"
-    className={`flex-grow hover:scale-105 transition transform duration-150 ease-out text-${textColor}-${textColorOpacity}`}
+    className={clsx([
+      'flex-grow hover:scale-105 transition transform duration-150 ease-out',
+      textColor,
+    ])}
     {...rest}
   >
     {text}
@@ -21,12 +19,10 @@ ActionButton.propTypes = {
   onClick: PropTypes.func,
   text: PropTypes.string,
   textColor: PropTypes.string,
-  textColorOpacity: PropTypes.string,
 };
 ActionButton.defaultProps = {
   onClick: () => {},
   text: '',
-  textColor: '',
-  textColorOpacity: '',
+  textColor: 'text-red-500',
 };
 export default ActionButton;

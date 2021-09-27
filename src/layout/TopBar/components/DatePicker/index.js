@@ -1,18 +1,16 @@
 import { DateRangePicker } from 'react-date-range';
-import { useState } from 'react';
 import { COLORS, RANGE_SELECTION } from 'shared/constants';
 import { UsersIcon } from '@heroicons/react/solid';
 import GuessesInput from 'shared/components/GuessesInput';
 import ActionButton from 'shared/components/ActionButton/index';
 import { useTopBarContext } from 'hooks/app/useTopBarContext';
+import { useRouter } from 'next/router';
+import { dateToString } from 'shared/utils';
 
 const DatePicker = () => {
-  const { setUserSearchInput } = useTopBarContext();
-
-  const [date, setDate] = useState({
-    startDate: new Date(),
-    endDate: new Date(),
-  });
+  const { setUserSearchInput, userSearchInput, guessesNumber, date, setDate } =
+    useTopBarContext();
+  const router = useRouter();
 
   const selectionRange = {
     startDate: date.startDate,
@@ -27,7 +25,22 @@ const DatePicker = () => {
       endDate,
     });
   };
-
+  const handleUserSearch = () => {
+    // TODO: add validation
+    if (guessesNumber === 0) {
+      throw new Error('please add just one');
+    }
+    router.push({
+      pathname: '/search',
+      query: {
+        location: userSearchInput,
+        startDate: dateToString(date.startDate),
+        endDate: dateToString(date.endDate),
+        guessesNumber,
+      },
+    });
+    setUserSearchInput('');
+  };
   return (
     <div className="flex flex-col col-span-3 mx-auto mt-0">
       <DateRangePicker
@@ -46,11 +59,14 @@ const DatePicker = () => {
       <div className="flex items-center">
         <ActionButton
           text="Cancel"
-          textColor="gray"
-          textColorOpacity="500"
+          textColor="text-gray-500"
           onClick={() => setUserSearchInput('')}
         />
-        <ActionButton text="Search" textColor="red" textColorOpacity="400" />
+        <ActionButton
+          text="Search"
+          textColor="text-red-400"
+          onClick={handleUserSearch}
+        />
       </div>
     </div>
   );

@@ -1,3 +1,14 @@
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #151f30;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #fd5b61;
+  outline: 1px solid #151f30;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,6 +48,10 @@
 
 .guesses-btn-colors-disbled {
   @apply hover:text-gray-500 border-gray-300 text-gray-400 bg-white cursor-not-allowed;
+}
+
+.filters-btn {
+  @apply rounded-full hover:border-gray-900 active:scale-95 active:bg-gray-100 bg-white border-solid border cursor-pointer leading-4 m-0 py-2 px-4 text-center transition transform duration-100 ease-out;
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {

@@ -3,7 +3,6 @@ import View from './View';
 
 const SearchInput = () => {
   const { userSearchInput, setUserSearchInput } = useTopBarContext();
-
   const onUserSearchInputChange = ({ value }) => {
     setUserSearchInput(value);
   };
