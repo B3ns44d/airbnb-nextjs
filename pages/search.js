@@ -30,3 +30,7 @@ const Search = () => {
   );
 };
 export default Search;
+
+export const getServerSideProps = async () => ({
+  props: {},
+});

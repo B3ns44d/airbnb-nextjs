@@ -3,13 +3,13 @@ import HeroImage from 'layout/HeroImage';
 import Head from 'next/head';
 import ExploreNearby from 'containers/nearby';
 import ContentWrapper from 'layout/ContentWrapper';
-import { api } from 'service/httpService';
-import { ENDPOINTS } from 'shared/constants';
+import { ENDPOINTS, HTTP_METHODS } from 'shared/constants';
 import { apiHomePropType } from 'shared/common/propTypes';
 import LiveAnyWhere from 'containers/liveanywhere';
 import SpaceHosting from 'containers/hosting';
 import DiscoverNewThings from 'containers/discover';
 import FutureGetaways from 'containers/futuregetaways';
+import { query } from 'service/apiService';
 
 const Home = ({ nearbyData, liveAnyWhereData, discover, futuregetaways }) => (
   <>
@@ -37,18 +37,22 @@ const Home = ({ nearbyData, liveAnyWhereData, discover, futuregetaways }) => (
 
 export const getStaticProps = async () => {
   try {
-    const { data: nearbyData } = await api.get(
-      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.NEARBYPLACES}`
-    );
-    const { data: liveAnyWhereData } = await api.get(
-      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.LIVEANYWHERE}`
-    );
-    const { data: discover } = await api.get(
-      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.DISCOVER}`
-    );
-    const { data: futuregetaways } = await api.get(
-      `${ENDPOINTS.BASE_URL}/${ENDPOINTS.FUTUREGETAWAYS}`
-    );
+    const nearbyData = await query({
+      method: HTTP_METHODS.GET,
+      url: ENDPOINTS.NEARBYPLACES,
+    });
+    const liveAnyWhereData = await query({
+      method: HTTP_METHODS.GET,
+      url: ENDPOINTS.NEARBYPLACES,
+    });
+    const discover = await query({
+      method: HTTP_METHODS.GET,
+      url: ENDPOINTS.LIVEANYWHERE,
+    });
+    const futuregetaways = await query({
+      method: HTTP_METHODS.GET,
+      url: ENDPOINTS.FUTUREGETAWAYS,
+    });
     return {
       props: {
         nearbyData,

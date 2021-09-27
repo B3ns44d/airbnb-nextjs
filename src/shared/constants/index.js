@@ -21,3 +21,8 @@ export const DATE_FORMAT = {
   startDate: 'MMM dd',
   endDate: 'dd',
 };
+
+export const HTTP_METHODS = {
+  GET: 'get',
+  POST: 'post',
+};
