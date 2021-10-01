@@ -26,3 +26,10 @@ export const HTTP_METHODS = {
   GET: 'get',
   POST: 'post',
 };
+
+export const PROGRESS_BAR_OPTIONS = {
+  size: 4,
+  color: COLORS.PRIMARY,
+  className: 'z-50',
+  delay: 100,
+};

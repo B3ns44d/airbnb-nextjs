@@ -8,6 +8,7 @@
     "format": "prettier --config .prettierrc.json '**/**/**/*.js' --write"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.1.2",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@tailwindcss/aspect-ratio": "^0.2.1",
