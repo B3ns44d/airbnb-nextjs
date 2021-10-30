@@ -33,3 +33,7 @@ export const PROGRESS_BAR_OPTIONS = {
   className: 'z-50',
   delay: 100,
 };
+
+export const MAPBOX = {
+  mapStyle: 'mapbox://styles/b3ns44d/cku89c9xe0p1m19no5ytr9cuo',
+};

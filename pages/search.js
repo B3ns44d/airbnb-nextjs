@@ -8,13 +8,19 @@ import SearchWrapper from 'containers/searchFilters/components/SearchWrapper';
 import SearchResultCard from 'shared/components/SearchCard';
 import { apiHomePropType } from 'shared/common/propTypes';
 import { uniqueId } from 'lodash';
+import SearchMap from 'containers/searchMap';
 
 const Search = ({ searchResult }) => {
   const { query } = useRouter();
   const { location, startDate, endDate, guessesNumber } = query;
+  const mapLocation = searchResult.map(({ long, lat }) => ({
+    longitude: long,
+    latitude: lat,
+  }));
+
   return (
     <Layout>
-      <main>
+      <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <SearchResultHeader
             date={{ startDate, endDate }}
@@ -47,6 +53,9 @@ const Search = ({ searchResult }) => {
               />
             )
           )}
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <SearchMap mapLocation={mapLocation} />
         </section>
       </main>
     </Layout>
